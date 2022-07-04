@@ -1,14 +1,14 @@
 export class UsuarioModel {
-    usuarioId   !: string;
+    usuarioId   ?: string;
     nombre      ?: string;
-    clave       !: string;
+    clave       ?: string;
     email       ?: string;
-    contrasena  !: string;
-    estatus     !: string;
-    fechaAlta   !: string;
-    rol         !: object;
+    password    ?: string;
+    estatus     ?: string;
+    fechaAlta   ?: string;
+    rol         ?: object;
+    jwtoken     ?: string;
 
     constructor() {
     }
-
 }

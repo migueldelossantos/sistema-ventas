@@ -1,9 +1,11 @@
 export class CategoriaModel {
-    categoriaid !: string;
-    nombre  !: string;
-    descripcion !: string;
-    clave   !: string;
+    categoriaid ?: string;
+    nombre  ?: string;
+    descripcion ?: string;
+    clave   ?: string;
 
-    constructor() {}
+    constructor(args:CategoriaModel) {
+        Object.assign(this,args);
+    }
 
 }

@@ -1,10 +1,12 @@
 export class SubCategoriaModel {
-    subcategoriaid  !: string;
-    nombre  !: string;
-    descripcion !: string;
-    clave   !: string;
-    categoriaId !: string;
+    subcategoriaid  ?: string;
+    nombre  ?: string;
+    descripcion ?: string;
+    clave   ?: string;
+    categoriaId ?: string;
 
-    constructor() {}
+    constructor(args:SubCategoriaModel) {
+        Object.assign(this,args)
+    }
 
 }

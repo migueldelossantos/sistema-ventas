@@ -1,0 +1,11 @@
+<div class="row">
+    <div class="mb-4" *ngFor="let m of menu">
+        <h5>{{ m.desplegado }}</h5>
+        <hr>
+        <div>
+            <button type="button" class="btn btn-outline-primary"
+                *ngFor="let opcion of m.opciones"
+                (click)="selectOpcion(opcion.ruta)">{{ opcion.desplegado }}</button>
+        </div>
+    </div>
+</div>

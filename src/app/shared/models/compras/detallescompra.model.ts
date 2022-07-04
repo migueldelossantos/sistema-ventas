@@ -1,10 +1,12 @@
 export class DetalleCompraModel {
-    compraId    !: string;
-    productoId  !: string;
-    cantidad    !: string;
-    precio  !: string;
-    descuento   !: string;
-    total   !: string;
+    compraId    ?: string;
+    productoId  ?: string;
+    cantidad    ?: string;
+    precio  ?: string;
+    descuento   ?: string;
+    total   ?: string;
 
-    constructor() { }
+    constructor(args:DetalleCompraModel) {
+        Object.assign(this,args)
+    }
 }

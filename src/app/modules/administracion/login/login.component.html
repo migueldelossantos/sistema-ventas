@@ -1,0 +1,40 @@
+    <div class="col-4 offset-md-4 card">
+        <h1 class="card-header text-center">Misc. Génesis</h1>
+        <form [formGroup]="loginForm" (ngSubmit)="login()" class="card-body">
+            <div class="mb-3">
+                <label class="form-label">Usuario</label>
+                <input type="email" 
+                    formControlName="email" 
+                    class="form-control" 
+                    id="email" 
+                    aria-describedby="emailHelp" 
+                    placeholder="usuario@correo.com"
+                    [class.is-invalid]="validaCampo('email')">
+            </div>
+            <div class="mb-3">
+                <label class="form-label">Contraseña</label>
+                <input type="password" 
+                    formControlName="password" 
+                    class="form-control" 
+                    id="password" 
+                    placeholder="********"
+                    [class.is-invalid]="validaCampo('password')">
+            </div>
+            <div class=" m-2">
+                <span class="text-danger">{{ mensajeError }}</span>
+            </div>
+            <!-- <div class="mb-3 form-check">
+                <input type="checkbox" class="form-check-input" id="exampleCheck1">
+                <label class="form-check-label" for="exampleCheck1">Check me out</label>
+            </div> -->
+            <div>
+                <a [href]="['/registro']" >Registrarme</a>
+                <br>
+                <a href="#">Olvidé mi usuario o contraseña</a>
+            </div>
+            <div class="text-center">
+                <br>
+                <button type="submit" class="btn btn-primary">Entrar</button>
+            </div>
+        </form>
+    </div>

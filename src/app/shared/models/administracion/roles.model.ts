@@ -1,8 +1,10 @@
 export class RolModel {
-    rolId       !: string;
-    nombre      !: string;
-    descripcion !: string;
-    clave       !: string;
+    rolId       ?: string;
+    nombre      ?: string;
+    descripcion ?: string;
+    clave       ?: string;
 
-    constructor() {}
+    constructor(args:RolModel){
+        Object.assign(this,args)
+    }
 }
